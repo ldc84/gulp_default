@@ -1,0 +1,42 @@
+
+#gnb {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  opacity: 0;
+  transition: all .3s ease-in-out;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  transform: scale(0.9);
+
+  a {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 20px 0;
+    color: #fff;
+    font-size: rem(24);
+    transition: all .3s ease-in-out;
+
+    &:hover,
+    &:focus {
+      color: $color-point-1;
+    }
+  }
+
+  #header.active + & {
+    opacity: 1;
+    z-index: 9;
+
+    nav {
+      transform: scale(1);
+    }
+  }
+}
